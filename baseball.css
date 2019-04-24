@@ -1,0 +1,91 @@
+body {
+	background-color: #000000;
+	color: white;
+	text-align: center;
+	font-family: Arial, sans-serif;
+}
+
+#nav {
+	width: 100%;
+	background-color: navy;
+	color: white;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+#mlblogo {
+	float: left;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+
+#info {
+	margin: 5px;
+}
+
+#teams {
+	padding-top:70px;
+}
+
+#dodgers, #dbacks {
+	width: 33%;
+	padding: 10px;
+	margin: 10px;
+	border: 2px solid white;
+	border-radius: 8px;
+}
+
+#dodgers {
+	background-color: #A5ACAF;
+	color: #005A9C;
+}
+
+#dbacks {
+	background-color: #A71930;
+	color: #E3D4AD;
+}
+
+#teams {
+	display: flex;
+	justify-content: center;
+}
+
+#dodgers > a {
+	text-decoration: none;
+	color: #005A9C;
+}
+
+#dbacks > a {
+	text-decoration: none;
+	color: #E3D4AD;
+}
+
+#standings {
+	display: none;
+	margin: auto;
+	width: 80%;
+	border-radius:10px;
+	background-color: navy;
+	color: white;
+	padding: 10px;
+	border: 2px solid white;
+} 
+
+#standingtable {
+	margin: auto;
+	width: 100%;
+}
+
+button {
+	display: block;
+	margin: auto;
+	width: 66%;
+	height: 40px;
+	border-radius:10px;
+	background-color: navy;
+	color: white;
+	font-size: 24px;
+}
