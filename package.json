@@ -1,11 +1,19 @@
 {
-  "name": "package",
+  "name": "mlb_clone",
   "version": "1.0.0",
-  "description": "",
+  "description": "baseball stats",
   "main": "baseball.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uacs337spring2019/mlb_clone.git"
+  },
+  "author": "noriegab1 westl1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uacs337spring2019/mlb_clone/issues"
+  },
+  "homepage": "https://github.com/uacs337spring2019/mlb_clone/index.html"
 }
