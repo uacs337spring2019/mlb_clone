@@ -1,3 +1,11 @@
+/*
+Benjamin Noriega, Logan West, CSC 337, Spring 2019
+FINAL PROJECT
+File: dbacks.css
+Due Date: April 24th, 2019
+NetID: noriegab1, westl1
+*/
+
 body {
 	background-color: #E3D4AD;
 	color: #E3D4AD;
@@ -34,7 +42,7 @@ body {
 	color: #000000;
 }
 
-#card {
+.card {
 	border: 4px solid #000000;
 	background-color: #A71930;
 	width: 66%;

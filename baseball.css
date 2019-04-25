@@ -1,3 +1,11 @@
+/*
+Benjamin Noriega, Logan West, CSC 337, Spring 2019
+FINAL PROJECT
+File: baseball.css
+Due Date: April 24th, 2019
+NetID: noriegab1, westl1
+*/
+
 body {
 	background-color: #000000;
 	color: white;
@@ -22,7 +30,7 @@ body {
 	top: 15px;
 }
 
-#info {
+.info {
 	margin: 5px;
 }
 
@@ -76,6 +84,10 @@ body {
 
 #standingtable {
 	margin: auto;
+	width: 100%;
+}
+
+a > img {
 	width: 100%;
 }
 

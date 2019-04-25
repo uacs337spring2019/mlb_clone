@@ -1,17 +1,24 @@
-
-
-"use strict";
+/*
+Benjamin Noriega, Logan West CSC 337, Spring 2019
+FINAL PROJECT
+File: dodgers.js
+Due Date: April 24th, 2019
+NetID: noriegab1, westl1
+*/
 
 (function() {
-
+	"use strict";
 	window.onload = pullRecord;
 
+	/**
+		Pulls data from API
+	*/
 	function pullRecord() {
-		let url = 'https://api.mysportsfeeds.com/v2.1/pull/mlb/2019-regular/team_stats_totals.json?team=lad';
-		let apikey_token = '';
-
+		let url = 'https://api.mysportsfeeds.com/v2.1/pull/mlb';
+		url += '/2019-regular/team_stats_totals.json?team=lad';
+		let apikey = "8cb8bd89-32ce-446d-b5f6-714475";
 		let h = new Headers();
-		h.append("Authorization", "Basic " + btoa("8cb8bd89-32ce-446d-b5f6-714475" + ":" + "MYSPORTSFEEDS"));
+		h.append("Authorization", "Basic " + btoa(apikey + ":" + "MYSPORTSFEEDS"));
 
 		let req = new Request(url, {
 			method: 'GET',
@@ -27,18 +34,19 @@
 				displayRecord(json);
 				teamStats(json);
 
-			})
-			.catch(function(error){
-
 			});
 	}
 
+	/**
+		Displays record for Dodgers
+		@param {json} data - json for team data
+	*/
 	function displayRecord(data){
 		let recordDiv = document.getElementById("record");
 
 		let team = data["teamStatsTotals"][0];
-		let wins = team["stats"]["standings"]["wins"]
-		let loss = team["stats"]["standings"]["losses"]
+		let wins = team["stats"]["standings"]["wins"];
+		let loss = team["stats"]["standings"]["losses"];
 
 		let recordStatement = document.createElement("p");
 
@@ -54,6 +62,10 @@
 
 	}
 
+	/**
+		Handles stats for Dodgers
+		@param {json} data - json for team data
+	*/
 	function teamStats(data) {
 		let stats = data["teamStatsTotals"][0]["stats"];
 		console.log(stats);
@@ -108,7 +120,11 @@
 
 	}
 
-
+	/**
+		Error checking
+		@param {string} response - response text
+		@return {string} response text - error status
+	*/
 	function checkStatus(response) {
 		if(response.status >= 200 && response.status < 300) {
 			return response.text();

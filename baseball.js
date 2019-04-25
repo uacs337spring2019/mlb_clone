@@ -1,18 +1,27 @@
-"use strict";
+/*
+Benjamin Noriega, Logan West CSC 337, Spring 2019
+FINAL PROJECT
+File: baseball.js
+Due Date: April 24th, 2019
+NetID: noriegab1, westl1
+*/
 
 (function() {
-
+	"use strict";
 	window.onload = function() {
 		let standingButton = document.getElementById("standButton");
 		standingButton.onclick = pullStandings;
 	};
 
+	/**
+		Standings Pull from API
+	*/
 	function pullStandings() {
-		let url = 'https://api.mysportsfeeds.com/v2.1/pull/mlb/2019-regular/standings.json';
-		let apikey_token = '';
-
+		let url = 'https://api.mysportsfeeds.com/v2.1/pull';
+		url += '/mlb/2019-regular/standings.json';
+		let apikey = "8cb8bd89-32ce-446d-b5f6-714475";
 		let h = new Headers();
-		h.append("Authorization", "Basic " + btoa("8cb8bd89-32ce-446d-b5f6-714475" + ":" + "MYSPORTSFEEDS"));
+		h.append("Authorization", "Basic " + btoa(apikey + ":" + "MYSPORTSFEEDS"));
 
 		let req = new Request(url, {
 			method: 'GET',
@@ -27,20 +36,21 @@
 
 				displayStandings(json);
 
-			})
-			.catch(function(error){
-
 			});
 	}
 
+	/**
+		Display function for standing feature
+		@param {json} data - standing data for teams
+	*/
 	function displayStandings(data) {
 
 		let standingDiv = document.getElementById("standings");
-		standings.style.display = "block";
+		standingDiv.style.display = "block";
 		let standButton = document.getElementById("standButton");
 		standButton.style.display = "none";
 
-		let standingTable = document.getElementById("standingtable")
+		let standingTable = document.getElementById("standingtable");
 		standingTable.innerHTML = "";
 
 
@@ -139,7 +149,11 @@
 		console.log(division);
 	}
 
-
+	/**
+		Error checking
+		@param {string} response - response text
+		@return {string} response text - error status
+	*/
 	function checkStatus(response) {
 		if(response.status >= 200 && response.status < 300) {
 			return response.text();
