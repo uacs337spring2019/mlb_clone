@@ -1,0 +1,8 @@
+{
+
+"name": "MLB Clone",
+"description": "MLB statistics for Dodgers and DBacks",
+"repository": "https://github.com/uacs337spring2019/mlb_clone",
+"logo": "https://rawgit.com/heroku/node-js-sample/master/public/node.svg",
+"keywords": ["node", "express", "static"]
+}
