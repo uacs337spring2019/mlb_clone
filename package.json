@@ -4,6 +4,7 @@
   "description": "Baseball statistics using API",
   "main": "baseball_service.js",
   "scripts": {
+    "start" : "node baseball_service.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

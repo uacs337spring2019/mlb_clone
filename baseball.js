@@ -24,7 +24,7 @@ NetID: noriegab1, westl1
 		let heyButton = document.getElementById("heyButton");
 		heyButton.style.display = "none";
 
-		let url = "http://localhost:3000";
+		let url = "http://mlbclone.herokuapp.com";
 		fetch(url)
 			.then(checkStatus)
 			.then(function(responseText) {
