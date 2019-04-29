@@ -2,7 +2,7 @@
   "name": "final_project",
   "version": "1.0.0",
   "description": "Baseball statistics using API",
-  "main": "baseball_service.js",
+  "main": "public/baseball_service.js",
   "dependencies" : {
     "client-sessions": "^0.8.0",
     "cookie-parser": "^1.4.4",
