@@ -5,7 +5,7 @@ app.use(express.static('public'));
 
 app.get('/', function(req, res) {
     res.header("Access-Control-Allow-Origin", "*");
-    res.send(index.html);
+    res.send("hello");
 })
 
 app.listen(process.env.PORT);
