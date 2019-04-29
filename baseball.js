@@ -29,11 +29,11 @@ NetID: noriegab1, westl1
 
 		});
 
-		fetch(req)
+		fetch(url)
 			.then(checkStatus)
 			.then(function(responseText){
 				let json = JSON.parse(responseText);
-
+ 
 				displayStandings(json);
 
 			});

@@ -1,8 +1,8 @@
 {
-  "name": "mlb_clone",
+  "name": "final_project",
   "version": "1.0.0",
-  "description": "baseball stats",
-  "main": "baseball.js",
+  "description": "Baseball statistics using API",
+  "main": "baseball_service.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/uacs337spring2019/mlb_clone.git"
   },
-  "author": "noriegab1 westl1",
+  "author": "noriegab1, westl1",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/uacs337spring2019/mlb_clone/issues"
   },
-  "homepage": "https://github.com/uacs337spring2019/mlb_clone#index"
+  "homepage": "https://github.com/uacs337spring2019/mlb_clone#readme"
 }
