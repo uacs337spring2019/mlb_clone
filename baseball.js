@@ -11,7 +11,31 @@ NetID: noriegab1, westl1
 	window.onload = function() {
 		let standingButton = document.getElementById("standButton");
 		standingButton.onclick = pullStandings;
+
+		let heyButton = document.getElementById("heyButton");
+		heyButton.onclick = hey;
+
 	};
+
+	function hey() {
+
+		let surprise = document.getElementById("surprise");
+		surprise.style.display = "block";
+		let heyButton = document.getElementById("heyButton");
+		heyButton.style.display = "none";
+
+		let url = "http://localhost:3000";
+		fetch(url)
+			.then(checkStatus)
+			.then(function(responseText) {
+				console.log(responseText);
+			})
+			.catch(function(error) {
+				console.log(error);
+			});
+
+
+	}
 
 	/**
 		Standings Pull from API
@@ -29,11 +53,11 @@ NetID: noriegab1, westl1
 
 		});
 
-		fetch(url)
+		fetch(req)
 			.then(checkStatus)
 			.then(function(responseText){
 				let json = JSON.parse(responseText);
- 
+
 				displayStandings(json);
 
 			});
